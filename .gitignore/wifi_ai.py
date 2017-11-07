@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#  Copyright 2017 lyy <lyy@lyy-Aspire-V5-552G>
+#  Copyright 2017 lyy 
 import authenticate
 import os
 import sys
