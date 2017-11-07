@@ -1,101 +1,34 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#  Copyright 2017 lyy <lyy@lyy-Aspire-V5-552G>
+import authenticate
+import os
+import sys
+import ShutdownWifi
+from datetime import datetime
+import get_is_internet
 
-# C extensions
-*.so
+def main(argv):
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+	# make a copy of original stdout route
+#	stdout_backup = sys.stdout	#输出导向原始地址
+	log_file = open("log.log", "a")#	a 是追加，w 只写  r 只读
+	sys.stdout = log_file
+	print '\n'
+	print datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+	print '\n'
+	print argv
+	if argv[1]=='shut':
+		if get_is_internet.is_on_internet()==0:
+			ShutdownWifi.login_account_shut_wifi()
+	else:
+		if argv[1]=='login':
+			if get_is_internet.is_on_internet()!=0:
+				authenticate.login_accounts()
+#	sys.stdout = stdout_backup	#还原输出到屏幕
+	log_file.close()
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# dotenv
-.env
-
-# virtualenv
-.venv
-venv/
-ENV/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
+if __name__ == '__main__':
+#	import sys
+#	sys.exit(main(sys.argv))
+	main(sys.argv)
