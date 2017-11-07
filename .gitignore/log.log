@@ -1,0 +1,52 @@
+﻿
+
+2017-11-02 15:30:47
+
+
+get login
+get status
+get id
+get password
+geting authenticate
+{"status":"993","response":"接入被拒绝，如有疑问，请拨打客服热线10000号，听到语音后按5。错误码【L705】"}
+0
+
+
+2017-11-02 15:41:39
+
+
+shut wifi start
+ceshi
+OK
+begain to shutdown wifi
+wifi has shuting down
+OK
+
+
+2017-11-02 15:49:42
+
+
+
+
+2017-11-02 15:50:19
+
+
+['wifi_ai.py']
+
+
+2017-11-02 15:50:46
+
+
+['wifi_ai.py', 'dfdfadd']
+
+
+2017-11-02 15:51:11
+
+
+['wifi_ai.py', 'login']
+
+
+2017-11-07 12:05:41
+
+
+['C:\\Users\\USER\\Desktop\\workspace\\pojiekuandai\\wifi_ai.py']
