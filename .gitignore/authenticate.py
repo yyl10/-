@@ -8,7 +8,7 @@ import get_ip
 def login_accounts():
     print 'get login'
     login_wifi = httplib.HTTPSConnection('www.loocha.com.cn', 8443)
-    headers = {"Authorization": "Basic MTc3NjYwODU4MzY6MTAxMDA5MDI=",
+    headers = {"Authorization": "Basic ",
                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0; XT1575 Build/MPHS24.49-18.3)",
                "Connection": "Keep-Alive","Accept-Encoding": "gzip" }
     login_wifi.request('GET', '/login', '', headers)
@@ -22,7 +22,7 @@ def login_accounts():
 def get_status():
     print 'get status'
     login_wifi = httplib.HTTPSConnection('wifi.loocha.cn', 443)
-    headers = {"Authorization": "Basic MTc3NjYwODU4MzY6MTAxMDA5MDI=",
+    headers = {"Authorization": "Basic ",
                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0; XT1575 Build/MPHS24.49-18.3)",
                "Connection": "Keep-Alive", "Accept-Encoding": "gzip"}
     login_wifi.request('GET', '/3849698/wifi/status', '', headers)
@@ -52,7 +52,7 @@ def get_id():
 def get_password():
     print 'get password'
     login_wifi = httplib.HTTPSConnection('wifi.loocha.cn', 443)
-    headers = {"Authorization": "Basic MTc3NjYwODU4MzY6MTAxMDA5MDI=",
+    headers = {"Authorization": "Basic ",
                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0; XT1575 Build/MPHS24.49-18.3)",
                "Connection": "Keep-Alive"}
     login_wifi.request('GET', '/3849698/wifi?server_did=541a0cc7-221d-45d1-bd7d-e74f96df9a72', '', headers)
@@ -67,7 +67,7 @@ def get_password():
 def wifi_authenticate(HIWF,password):
     print 'geting authenticate'
     login_wifi = httplib.HTTPSConnection('wifi.loocha.cn', 443)
-    headers = {"Authorization": "Basic MTc3NjYwODU4MzY6MTAxMDA5MDI=",
+    headers = {"Authorization": "Basic ",
                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0; XT1575 Build/MPHS24.49-18.3)",
                "Connection": "Keep-Alive",
                "Accept-Language": "zh-CN,zh;q=0.8,en;q=0.6",
