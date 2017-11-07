@@ -10,7 +10,7 @@ import get_ip
 def login_account_shut_wifi():
     print 'shut wifi start'
     login_wifi = httplib.HTTPSConnection('www.loocha.com.cn', 8443)
-    headers = {"Authorization": "Basic MTc3NjYwODU4MzY6MTAxMDA5MDI=",
+    headers = {"Authorization": "Basic ",
                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0; XT1575 Build/MPHS24.49-18.3)",
                "Connection": "Keep-Alive" }
     login_wifi.request('GET', '/login', '', headers)
@@ -23,7 +23,7 @@ def login_account_shut_wifi():
 def shutdown_wifi():
     print 'begain to shutdown wifi'
     login_wifi = httplib.HTTPSConnection('wifi.loocha.cn', 443)
-    headers = {"Authorization": "Basic MTc3NjYwODU4MzY6MTAxMDA5MDI=",
+    headers = {"Authorization": "Basic ",
                "Content-Type": " application/x-www-form-urlencoded",
                "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 6.0; XT1575 Build/MPHS24.49-18.3)",
                "Connection": "Keep-Alive", "Accept-Encoding": "gzip", 'Content-Length': '0'}
